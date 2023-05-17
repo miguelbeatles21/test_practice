@@ -1,13 +1,6 @@
 pipeline {
+    agent { dockerfile true }
     stages {
-        stage ('Build Image'){
-            agent {
-                dockerfile {
-                    filename 'Dockerfile',
-                    path_initial '/test'
-                } 
-            }
-        }
         stage('Test') {
             steps {
                 echo 'Testing'
