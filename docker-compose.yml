@@ -1,0 +1,5 @@
+services:
+  coordinator:
+    image: jenkins/jenkins
+    ports:
+      - "8090:8080"
